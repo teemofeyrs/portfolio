@@ -24,7 +24,7 @@ module.exports = {
     },
     entry: {
         main: '@/js/main.js',
-        analytics: '@/js/analytics.js'
+        /*analytics: '@/js/analytics.js'*/
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,12 +41,32 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/favicon.png'),
+                    from: path.resolve(__dirname, 'src/favicon.ico'),
                     to: path.resolve(__dirname, 'dist')
                 },
+                /*{
+                    from: path.resolve(__dirname, 'src/assets'),
+                    to: path.resolve(__dirname, 'dist/assets')
+                },*/
+                /*{
+                    from: path.resolve(__dirname, 'src/assets/img/logoBrands'),
+                    to: path.resolve(__dirname, 'dist/assets/img/logoBrands')
+                },*/
+               /* {
+                    from: path.resolve(__dirname, 'src/assets/work'),
+                    to: path.resolve(__dirname, 'dist/assets/work')
+                },
                 {
-                    from: path.resolve(__dirname, 'src/assets/img'),
-                    to: path.resolve(__dirname, 'dist/assets/img')
+                    from: path.resolve(__dirname, 'src/assets/img/home-banner-bg.jpg'),
+                    to: path.resolve(__dirname, 'dist/assets/img/home-banner-bg.jpg')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/img/workBg.jpg'),
+                    to: path.resolve(__dirname, 'dist/assets/img/workBg.jpg')
+                },*/
+                {
+                    from: path.resolve(__dirname, 'src/php/mail.php'),
+                    to: path.resolve(__dirname, 'dist/mail.php')
                 }
             ]
         }),
@@ -60,6 +80,16 @@ module.exports = {
         ],
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.css$/,
                 use: [ MiniCssExtractPlugin.loader, 'css-loader']
@@ -76,7 +106,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
             }
         ]
     }

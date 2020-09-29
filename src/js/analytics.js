@@ -1,6 +1,5 @@
 let count = 0;
 function counter(){
-    console.log(count);
     return count++;
 
 }

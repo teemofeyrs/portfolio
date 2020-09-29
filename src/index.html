@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="favicon.png" type="image/icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Artem Shmatchenko</title>
 </head>
 <body>
@@ -12,48 +12,51 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: transparent">
     <div class="container">
 
-            <div class="d-flex align-items-center brand">
-                <a class="navbar-brand text-uppercase" style="height: 100%;" href="#home">Artem Shmatchenko</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="d-flex align-items-center brand">
+            <a class="navbar-brand text-uppercase" style="height: 100%;" data-scroll-nav="0">Artem Shmatchenko</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white active" href="#home">Home <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#works">My Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white active" data-scroll-nav="0">Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-scroll-nav="1">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-scroll-nav="2">My skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-scroll-nav="3">My Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-scroll-nav="4">Contac Me</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
 <!--section my home-->
-<section id="home" class="home">
+<section id="home" class="home" data-scroll-index="0">
     <div class="container">
         <!--Banner Content-->
         <div class="banner-caption">
-            <h1>Hi! I'm Artem.</h1>
-            <p class="cd-headline clip mt-30">
-                <span>Creative front-end developer &amp; Developer located in Ukraine.</span><br>
-                <span class="blc">Specialized in</span>
-                <span class="cd-words-wrapper">
+            <p class="ah-headline clip mt-30">
+                <span class="headText">Hi! I'm Artem.</span><br/>
+                <span>Creative front-end developer &amp; located in Ukraine.</span><br>
+                <span class="blc">Specialized in :</span>
+                <span class="ah-words-wrapper">
                             <b class="is-visible">Creating Websites.</b>
-                    <!-- <b class="is-hidden">Responsive.</b>
-                    <b class="is-hidden">React SPA.</b> -->
-                        </span>
+                            <b class="is-hidden">Creating a Single-Page App in React.</b>
+                            <b class="is-hidden">Responsive design.</b>
+                    </span>
             </p>
         </div>
         <div class="arrow bounce">
@@ -63,13 +66,13 @@
 </section>
 
 <!--section my about-->
-<section id="about" class="about">
+<section id="about" class="about" data-scroll-index="1">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-6 col">
                 <!--About Image-->
                 <div class="about-img">
-                    <img src="src/assets/img/myFoto.jpg" alt="MY_COVER">
+                    <img src="assets/img/myFoto.jpg" alt="MY_COVER">
                 </div>
             </div>
             <div class="col-lg-7 col-md-6">
@@ -79,13 +82,11 @@
                         <h2>About Me.</h2>
                         <span>Front end Developer</span>
                     </div>
-                    <p>I'm <b>Artem Shmatchenko</b> Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to specimen book.</p>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English.</p>
+                    <p>I'm <b>Artem Shmatchenko</b> Creative and passionate front-end developer with more then 1 year
+                        experiense. Maintaining and supportig UI using modern web technologies and Agile methodology.
+                        Experienced in cross platgorm development and following D.R.Y. code patterns for clean and
+                        readeble codes.</p>
+
                     <!--About Social Icons-->
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/artem-shmatchenko-306135135/" target="_blank"><i
@@ -104,7 +105,7 @@
 </section>
 
 <!--section my skills-->
-<section id="skills" class="skills">
+<section id="skills" class="skills" data-scroll-index="2">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -120,8 +121,7 @@
                 <div class="service-item">
                     <span class="icon html"></span>
                     <h4>html5</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p> HTML is the most basic building block in the web development process</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -129,8 +129,7 @@
                 <div class="service-item">
                     <span class="icon css"></span>
                     <h4>CSS3</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>Selectors, Combinators, flex, grid, animation ...</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -138,8 +137,8 @@
                 <div class="service-item">
                     <span class="icon javascript"></span>
                     <h4>javascript</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>All Data types, Objects methods, Array methods, Map, Set, Functions, Function expressions,
+                        Arrow functions, Class, Prototype, Promises and other</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -147,8 +146,7 @@
                 <div class="service-item">
                     <span class="icon scss"></span>
                     <h4>scss</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>Syntax, style rules, variables, @extend and @mixin rule, ....</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -156,8 +154,7 @@
                 <div class="service-item">
                     <span class="icon bootstrap"></span>
                     <h4>bootstrap</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>Can use all components, configuring individual modules</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -165,8 +162,8 @@
                 <div class="service-item">
                     <span class="icon responsive"></span>
                     <h4>Responsive Design</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or
+                        enlarge, a website, to make it look good on all devices (desktops, tablets, and phones)</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -174,7 +171,7 @@
                 <div class="service-item">
                     <span class="icon ts"></span>
                     <h4>TypeScript</h4>
-                    <p>Lorem Ipsum TypeScript of ts standard dummy text ever.</p>
+                    <p>It is an optional type system for JavaScript.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -182,8 +179,7 @@
                 <div class="service-item">
                     <span class="icon react"></span>
                     <h4>React</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>jsx syntax,component , passing Data through props,the component lifecycle, hoc, hooks</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -191,8 +187,23 @@
                 <div class="service-item">
                     <span class="icon redux"></span>
                     <h4>Redux</h4>
-                    <p>Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text
-                        ever.</p>
+                    <p>Actions, Reducers, Store, ...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!--Service Item-->
+                <div class="service-item">
+                    <span class="icon git"></span>
+                    <h4>version control / Git</h4>
+                    <p>git add , commit, fetch, pull, push, checkout, ...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!--Service Item-->
+                <div class="service-item">
+                    <span class="icon webpack"></span>
+                    <h4>Webpack</h4>
+                    <p>Assembly and configuration of the project using Webpack</p>
                 </div>
             </div>
         </div>
@@ -200,7 +211,7 @@
 </section>
 
 <!--section my work-->
-<section id="works" class="works">
+<section id="works" class="works" data-scroll-index="3">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -218,7 +229,7 @@
 </section>
 
 <!--section my contacts-->
-<section id="contacts" class="contacts">
+<section id="contacts" class="contacts" data-scroll-index="4">
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -233,26 +244,39 @@
                 <!--Contact Form-->
                 <form id="contact-form" method="POST">
                     <div class="row">
-                        <div class="col-md-6 form-group">
-                            <!--name-->
-                            <input type="text" class="form-control con-validate" id="contact-name" placeholder="Name"
-                                   minlength="3"/>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <!--email-->
-                            <input type="email" class="form-control con-validate" id="contact-email"
-                                   placeholder="Email"/>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <!--message box-->
-                            <textarea class="form-control con-validate" rows="6" id="contact-message"
-                                      placeholder="How can we help you?"></textarea>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <!--contact button-->
-                            <button id="contact-submit" class="mt-30 main-btn">
-                                Send Message
-                            </button>
+                        <form action="" method="post">
+                            <div class="col-md-6 form-group">
+
+                                <!-- Hidden Required Fields -->
+                                <input type="hidden" name="project_name" value="Site Portfolio">
+                                <input type="hidden" name="admin_email" value="artem.shmatchenko.dev@gmail.com">
+                                <input type="hidden" name="form_subject" value="Contact person">
+                                <!-- END Hidden Required Fields -->
+
+                                <!--name-->
+                                <input type="text" class="form-control con-validate" id="contact-name"
+                                       placeholder="Name"
+                                       minlength="3"/>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <!--email-->
+                                <input type="email" class="form-control con-validate" id="contact-email"
+                                       placeholder="Email"/>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <!--message box-->
+                                <textarea class="form-control con-validate" rows="6" id="contact-message"
+                                          placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <!--contact button-->
+                                <button type="submit" id="sendEmail" class="mt-30 main-btn">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                        <div id="messAlert" class="col col-md-12 alert alert-danger mt-5 messAlert" role="alert">
+
                         </div>
                     </div>
                 </form>

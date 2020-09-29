@@ -13,6 +13,7 @@ function _createModalFooter( buttons = []) {
         $btn.innerHTML = btn.content;
         $btn.classList.add('btn');
         $btn.classList.add(`btn-${btn.classBtn || 'secondary'}`);
+        $btn.dataset.url = btn.url;
         $btn.onclick = btn.handler || noop
         wrap.appendChild($btn);
     })
@@ -66,8 +67,8 @@ Modal.skillsModal = function (options) {
         }
     }
     const $modal = new _createModal(options);
-    const footer = _createModalFooter(options.footer)
-    footer.appendAfter(document.querySelector('[data-content]'));
+    /*const footer = _createModalFooter(options.footer)
+    footer.appendAfter(document.querySelector('[data-content]'));*/
     $modal.addEventListener('click' , closeWindow)
     return Object.assign(modalWindow, {
         destroy(){
@@ -77,6 +78,14 @@ Modal.skillsModal = function (options) {
         setContent(html){
             let content = document.querySelector('[data-content]');
             content.innerHTML = html;
+        },
+        setFooter(footer){
+            let oldFooter = document.querySelector('.modal-footer');
+            if(oldFooter){
+                oldFooter.parentNode.removeChild(oldFooter);
+            }
+            const $footer = _createModalFooter(footer)
+            $footer.appendAfter(document.querySelector('[data-content]'));
         }
     })
 

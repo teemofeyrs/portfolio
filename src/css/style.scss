@@ -12,6 +12,7 @@ body {
 
 /* modal window */
   .modal-window{
+    font-family: "Open Sans", sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,6 +59,11 @@ body {
             cursor: pointer;
           }
         }
+        .modal-body{
+          img{
+            height: 150px;
+          }
+        }
         .modal-footer{
           button{
             font-size: 16px;
@@ -73,7 +79,7 @@ body {
       background-color: rgba(0, 0, 0, 0.6);
       .m-window{
         opacity: 1;
-        top: 200px;
+        top: 100px;
       }
     }
   }
@@ -129,7 +135,7 @@ body {
               padding: 0;
               position: relative;
               color: #ffffff;
-
+              cursor: pointer!important;
               &:before {
                 content: "";
                 position: absolute;
@@ -180,14 +186,14 @@ body {
           text-align: center;
           .nav-item {
             color: #000000;
-
+            cursor: pointer;
             .nav-link {
               color: #000000 !important;
               position: relative;
               display: inline-block;
+              cursor: pointer;
               &:before {
                 background-color: #000000;
-
               }
             }
           }
@@ -218,22 +224,34 @@ body {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
 
-        h1 {
+        .headText {
           font-size: 88px;
           font-weight: 900;
           color: #fff;
         }
-
-        p {
-          margin-top: 0;
-          margin-bottom: 1rem;
-
           span {
+            position: relative;
             display: inline-block;
             padding: 0.2em 0;
           }
+        .ah-words-wrapper.waiting::after{
+          background-color: #ffffff;
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 3px;
+          height: 100%;
         }
-
+        .ah-headline.clip .ah-words-wrapper::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 3px;
+          height: 100%;
+          background-color: #ffffff;
+        }
       }
 
       .arrow {
@@ -279,9 +297,6 @@ body {
       height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.4);
-      -webkit-transition: .5s all ease;
-      -o-transition: .5s all ease;
-      transition: .5s all ease;
     }
 
   }
@@ -470,6 +485,12 @@ body {
       .redux{
         background-image: url("../assets/img/skills/redux.png");
       }
+      .git{
+        background-image: url("../assets/img/skills/git.png");
+      }
+      .webpack{
+        background-image: url("../assets/img/skills/webpack.png");
+      }
       h4 {
         font-size: 18px;
         font-weight: 700;
@@ -486,9 +507,10 @@ body {
   }
 
   section.works{
-    padding: 100px 0 70px;
     position: relative;
+    padding: 100px 0 70px;
     width: 100%;
+    font-family: "Open Sans", sans-serif;
     background-image: url("../assets/workBg.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -529,7 +551,15 @@ body {
         }
       }
     }
-
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
   }
 
   section.contacts {
@@ -590,6 +620,13 @@ body {
         cursor: pointer;
       }
     }
+    .messAlert{
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .messAlert.show{
+      opacity: 1;
+    }
   }
 
   footer {
@@ -621,3 +658,7 @@ body {
     }
   }
 }
+
+
+
+
