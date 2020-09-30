@@ -32,10 +32,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.11.5",
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "jquery-animated-headlines": "^1.0.0",
     "popper.js": "^1.16.1",
     "scrollit": "^1.0.5"
-  }
+  },
+  "browserslist": "> 0.25%, not dead"
 }

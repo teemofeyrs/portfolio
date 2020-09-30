@@ -128,21 +128,6 @@ const modal = Modal.skillsModal({
     closable: true,
     content: `<h2>my site arkena</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nostrum.</p>`,
     width: '500px',
-    /*footer: [
-        {
-            content: `View code <i class="fa fa-eye ml-1" aria-hidden="true"></i>`,
-            classBtn: 'danger',
-            url: 'https://github.com/teemofeyrs/first-git/tree/master/work/Arkena',
-            handler(){OpenInNewTabWinBrowser(this.dataset.url).bind(this) }
-        },
-        {
-            content: `Visit site <i class="fa fa-list-alt ml-1" aria-hidden="true"></i>`,
-            classBtn: 'success',
-            url: 'https://github.com/teemofeyrs/first-git/tree/master/work/Arkena',
-            handler(){OpenInNewTabWinBrowser(this.dataset.url).bind(this) }
-        }
-    ]*/
+
 });
 
-let $ban = document.body.firstChild;
-$ban.parentNode.firstChild($ban);

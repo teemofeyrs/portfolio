@@ -23,7 +23,7 @@ module.exports = {
         }
     },
     entry: {
-        main: '@/js/main.js',
+        main: ['@babel/polyfill','@/js/main.js'],
         /*analytics: '@/js/analytics.js'*/
     },
     output: {
@@ -44,26 +44,14 @@ module.exports = {
                     from: path.resolve(__dirname, 'src/favicon.ico'),
                     to: path.resolve(__dirname, 'dist')
                 },
-                /*{
-                    from: path.resolve(__dirname, 'src/assets'),
-                    to: path.resolve(__dirname, 'dist/assets')
-                },*/
-                /*{
+                {
+                    from: path.resolve(__dirname, 'src/assets/img/myFoto.jpg'),
+                    to: path.resolve(__dirname, 'dist/assets/img/myFoto.jpg')
+                },
+                {
                     from: path.resolve(__dirname, 'src/assets/img/logoBrands'),
                     to: path.resolve(__dirname, 'dist/assets/img/logoBrands')
-                },*/
-               /* {
-                    from: path.resolve(__dirname, 'src/assets/work'),
-                    to: path.resolve(__dirname, 'dist/assets/work')
                 },
-                {
-                    from: path.resolve(__dirname, 'src/assets/img/home-banner-bg.jpg'),
-                    to: path.resolve(__dirname, 'dist/assets/img/home-banner-bg.jpg')
-                },
-                {
-                    from: path.resolve(__dirname, 'src/assets/img/workBg.jpg'),
-                    to: path.resolve(__dirname, 'dist/assets/img/workBg.jpg')
-                },*/
                 {
                     from: path.resolve(__dirname, 'src/php/mail.php'),
                     to: path.resolve(__dirname, 'dist/mail.php')

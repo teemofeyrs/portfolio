@@ -1,85 +1,73 @@
+window.addEventListener("DOMContentLoaded", function () {
+
+        // get the form elements defined in your form HTML above
+
+        let form = document.querySelector("#contactForm");
+        let button = document.getElementById("sendEmail");
+        let name = document.getElementById("contact-name");
+        let email = document.getElementById("contact-email");
+        let message = document.getElementById("contact-message");
+
+        let status = document.getElementById("messAlert");
+
+
+    form.onsubmit = async (e) => {
+        e.preventDefault();
+
+        let formD = new FormData();
+        formD.append('name' , name.value);
+        formD.append('email' , email.value);
+        formD.append('message' , message.value);
+        let response = await fetch('https://formspree.io/f/maylnpja', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                // "Content-Type": "multipart/form-data",
+            },
+            body: formD
+        });
+
+        let result = await response.json();
+
+        alert(result.message);
+    };
+
+    // Success and Error functions for after the form is submitted
+
+      /*  function success() {
+            form.reset();
+            button.style = "display: none ";
+            status.innerHTML = "Thanks!";
+        }
+
+        function error() {
+            status.innerHTML = "Oops! There was a problem.";
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            let data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });*/
+    }
+);
+
+// helper function for sending an AJAX request
 
 /*
-$(function(){
-
-    function validateEmail(_$email) {
-        let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        return emailReg.test( _$email );
-    }
-    function clearErrorMessage(_errorField){
-        setTimeout(function (){
-            _errorField.text("");
-            _errorField.removeClass("show");
-        }, 1500)
-    }
-    $('#sendEmail').on('click', function (){
-        let name = $('#contact-name').val().trim();
-        let email = $('#contact-email').val().trim();
-        let message = $('#contact-message').val().trim();
-        let errorField = $('#messAlert');
-
-        if(name === ''){
-            errorField.addClass( "show" );
-            errorField.text("Enter name!");
-            clearErrorMessage(errorField);
-            return false;
-        }else if(email === ''){
-            errorField.addClass( "show" );
-            errorField.text("Enter email!");
-            clearErrorMessage(errorField);
-            return false;
-        }else if(message.length < 5){
-            errorField.addClass( "show" );
-            errorField.text("Write message more than 5 letters!");
-            clearErrorMessage(errorField);
-            return false;
-        }else if( !validateEmail(email)){
-            errorField.addClass( "show" );
-            errorField.text("Enter correct email!")
-            clearErrorMessage(errorField);
-            return false;
+function ajax(method, url, data, success, error) {
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+        } else {
+            error(xhr.status, xhr.response, xhr.responseType);
         }
-        clearErrorMessage(errorField);
-
-        $.ajax({
-            url: 'mail.php',
-            method: 'POST',
-            cache: false,
-            data: {
-                'name': name,
-                'email': email,
-                'message': message,
-            },
-            dataType: 'html',
-            beforeSend: function () {
-                $('#sendEmail').prop('disabled', true)
-            },
-            success: function (data) {
-                errorField.removeClass('alert-danger');
-                errorField.addClass('alert-success');
-                errorField.text(data);
-                $('#sendEmail').prop('disabled', false)
-            }
-        })
-    })
-});*/
-
-$(document).ready(function() {
-
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Thank you!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
-});
+    };
+    xhr.send(data);
+}*/
