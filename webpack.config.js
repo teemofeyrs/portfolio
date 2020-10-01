@@ -52,10 +52,6 @@ module.exports = {
                     from: path.resolve(__dirname, 'src/assets/img/logoBrands'),
                     to: path.resolve(__dirname, 'dist/assets/img/logoBrands')
                 },
-                {
-                    from: path.resolve(__dirname, 'src/php/mail.php'),
-                    to: path.resolve(__dirname, 'dist/mail.php')
-                }
             ]
         }),
             new MiniCssExtractPlugin({

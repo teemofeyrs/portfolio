@@ -11,35 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85131b5a-1a65-44a9-a442-d7bbd64b28b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/home-banner-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/Typescript.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/bootstrap-4-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/css.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/git.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/html.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/javascript.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/react.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/redux.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/responsive-design.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/scss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/skills/webpack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/work/arkenea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/work/jobOffer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/work/studio_Roma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/workBg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/dist.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.050f8ff459e0a71de51e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.050f8ff459e0a71de51e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/ajaxMail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/ajaxMail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +75,8 @@
       <workItem from="1601349174611" duration="1468000" />
       <workItem from="1601372275737" duration="5496000" />
       <workItem from="1601466465538" duration="3378000" />
+      <workItem from="1601528741268" duration="4473000" />
+      <workItem from="1601538220632" duration="1713000" />
     </task>
     <servers />
   </component>
